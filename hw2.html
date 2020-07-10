@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Page</title>
+    <meta charset="utf-8" />
+    <!--Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- HTML5 Shiv -->
+    <script src="js/html5shiv.js"></script>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <th style="color: aquamarine; font-size: 200%;">Assigned Tasks</th>
+        <th style="color: red; font-size: 200%;">Due Date</th>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <input
+      type="button"
+      value="back to homework"
+      onclick="newDoc3()"
+      style="font-size: 100%;"
+      class="button2"
+    />
+    <script>
+      function newDoc3() {
+        window.location.assign(
+          "C:/Users/Gayatri/Documents/IoT/atmanirbhar_bharat_hackathon/hw.html"
+        );
+      }
+    </script>
+
+    <!-- For homework input -->
+
+    <!-- <div class="container">
+      <form action="Your submitted answer is:_get.php" method="get">
+        <div class="row">
+          <div class="col-25">
+            <label for="Assignment">Assignment:</label>
+          </div>
+          <div class="col-75">
+            <!-- <textarea
+              id="Assignment"
+              name="Assignment"
+              placeholder="Write something.."
+              style="height: 200px;"
+            ></textarea> -->
+          <!-- </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit" /> -->
+        </div> -->
+      </form>
+      <meta
+name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+</head>
+<body>
+<div>
+Upload Files<br />
+<input type="file" id="files" multiple /><br /><br />
+<button id="send">Upload</button>
+<p id="uploading"></p>
+<progress value="0" max="100" id="progress"></progress>
+</div>
+
+<!-- <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyACubRr1672hZrs1CEmJjZlQoi5SY5wfKc",
+    authDomain: "teaching-804be.firebaseapp.com",
+    databaseURL: "https://teaching-804be.firebaseio.com",
+    projectId: "teaching-804be",
+    storageBucket: "teaching-804be.appspot.com",
+    messagingSenderId: "500700309080",
+    appId: "1:500700309080:web:dea385f66b1770f2c18c2d",
+    measurementId: "G-6K3JZ7ZDN6"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script> -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC5mYz5YDEPmz_EZfzvOt0QGykNpA8ByQA",
+    authDomain: "saras-2b38d.firebaseapp.com",
+    databaseURL: "https://saras-2b38d.firebaseio.com",
+    projectId: "saras-2b38d",
+    storageBucket: "saras-2b38d.appspot.com",
+    messagingSenderId: "948602227088",
+    appId: "1:948602227088:web:bb83cb8ac4318d5a0b0b15",
+    measurementId: "G-MJCR30B13M"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script>
+var files = [];
+document.getElementById("files").addEventListener("change", function(e) {
+  files = e.target.files;
+  for (let i = 0; i < files.length; i++) {
+    console.log(files[i]);
+  }
+});
+
+document.getElementById("send").addEventListener("click", function() {
+  //checks if files are selected
+  if (files.length != 0) {
+    //Loops through all the selected files
+    for (let i = 0; i < files.length; i++) {
+      //create a storage reference
+      var storage = firebase.storage().ref(files[i].name);
+
+      //upload file
+      var upload = storage.put(files[i]);
+
+      //update progress bar
+      upload.on(
+        "state_changed",
+        function progress(snapshot) {
+          var percentage =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          document.getElementById("progress").value = percentage;
+        },
+
+        function error() {
+          alert("error uploading file");
+        },
+
+        function complete() {
+          document.getElementById(
+            "uploading"
+          ).innerHTML += `${files[i].name} uploaded <br />`;
+
+        }
+
+      );
+
+    }
+  } else {
+    alert("No file chosen");
+  }
+});
+
+function getFileUrl(filename) {
+  //create a storage reference
+  var storage = firebase.storage().ref(filename);
+
+  //get file url
+  storage
+    .getDownloadURL()
+    .then(function(url) {
+      console.log(url);
+    })
+    .catch(function(error) {
+      console.log("error encountered");
+    });
+}
+</script>
+    </div>
+  </body>
+</html>

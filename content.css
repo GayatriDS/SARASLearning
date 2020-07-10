@@ -1,0 +1,89 @@
+body {
+  background-color: rgb(243, 196, 225);
+}
+
+#videoCall {
+  background-color: cornflowerblue;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  height: 100px;
+  width: 500px;
+  text-align: center;
+  margin-left: 280px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+#homework {
+  background-color: rgb(115, 202, 81);
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  height: 100px;
+  width: 500px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+#games {
+  background-color: rgb(237, 105, 100);
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  height: 100px;
+  width: 500px;
+  margin-left: 280px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+#test {
+  background-color: rgb(100, 228, 237);
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  height: 100px;
+  width: 500px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+#stories {
+  background-color: rgb(237, 228, 100);
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  height: 100px;
+  width: 500px;
+  margin-left: 280px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+#video {
+  width: 100px;
+  height: 100px;
+  margin-top: 0px;
+}
+
+#homeW {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 650px;
+}
+
+#gameImage {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+#testImage {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 650px;
+}
+
+#storyImage {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}

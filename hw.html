@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Page</title>
+    <meta charset="utf-8" />
+    <!--Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- HTML5 Shiv -->
+    <script src="html5shiv.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header>
+      <h1
+        style="
+          text-align: center;
+          font: cursive;
+          color: powderblue;
+          font-size: 300%;
+          background-color: orangered;
+          font-family: cursive;
+        "
+      >
+        Hey,Let's have some Fun Exercise!
+      </h1>
+    </header>
+    <img src="bgimg.png.jpg" height="200%" width="100%" />
+    <br /><br /><br />
+    <div class="bg-image"></div>
+    <div class="bg-text">
+      <input
+        type="button"
+        value="Tasks to do"
+        onclick="newDoc()"
+        style="font-size: 100%; color: greenyellow; margin-left: auto;"
+        class="button"
+      />
+      <input
+        type="button"
+        value="Check Grade"
+        onclick="newDoc1()"
+        style="
+          font-size: 100%;
+          color: darkorange;
+          margin-right: auto;
+          table-layout: auto;
+        "
+        class="button1"
+      />
+    </div>
+
+    <script>
+      function newDoc() {
+        window.location.assign(
+          "C:/Users/Gayatri/Documents/IoT/atmanirbhar_bharat_hackathon/hw2.html"
+        );
+      }
+      function newDoc1() {
+        window.location.assign(
+          "C:/Users/Gayatri/Documents/IoT/atmanirbhar_bharat_hackathon/hw3.html"
+        );
+      }
+    </script>
+  </body>
+</html>
